@@ -1,7 +1,6 @@
 const apiUri = "https://apps.kodim.cz/daweb/trening-api/apis/tasks-api/tasks";
 
 export const Task = ({ name, due, done }) => {
-  const doneMark = done ? "✓" : "";
 
   return `
         <div class="task">
@@ -9,7 +8,7 @@ export const Task = ({ name, due, done }) => {
           <div class="task__name">${name}</div>
           <div class="task__due">${due}</div>
         </div>
-        <div class="task__done">${doneMark}</div>
+        <div class="task__done">${done ? "✓" : ""}</div>
       </div>
       `;
 };
