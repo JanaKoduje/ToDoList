@@ -17,7 +17,7 @@ export const Task = ({ name, due, done }) => {
 // helpers
 const renderTask = (data) => {
   const taskListElm = document.querySelector("#taskList");
-  taskListElm.innerHTML = [data.map((task) => Task(task))].join("\n");
+  taskListElm.innerHTML = data.map((task) => Task(task)).join("\n");
 };
 
 const dataProcess = (uri) =>
